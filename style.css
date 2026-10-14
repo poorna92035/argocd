@@ -1,0 +1,276 @@
+QCaklVYNuPeZfdkO
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+body{
+    overflow-x: hidden;
+}
+#kambham{
+    width: 100%;
+
+    background-color: rgb(43, 207, 248);
+    padding-left: 20px;
+}
+
+
+a{
+    text-decoration: none;
+    color:rgb(163, 33, 33);
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 25px;
+    
+}
+#kambham_h2{
+    margin-left: 700px;
+}
+ul li{
+    padding: 50px 0px 30px;
+}
+a{
+    padding-left: 20px;
+}
+#sec1{
+    background-color: rgb(43, 207, 248);
+    height:600px;
+}
+#col_img{
+    background-color: white;
+    margin-left: 100px;
+    border-radius: 20px 0px opx 20px;
+    
+}
+#bike_img{
+    width: 550px;
+    height: 600px;
+    border-radius: 20px 20px 20px 20px;
+    padding-top: 20px;
+    margin-left: 10px;
+    
+    
+}
+#bike_img:hover{
+    box-shadow: 0px 0px 10px 10px;
+
+}
+#info{
+    background-color: white;
+    border-radius: 0px 20px 20px 0px;
+    box-shadow: 0px 0px 0px 0px #aaa;
+}
+#info_p1{
+    margin-top: 130px;
+    margin-left: 105px;
+    color: #aaa;
+}
+#info_h2::first-letter
+{
+    color: red;
+    font-size: 50px;
+    margin-left: 100px;
+}
+#info_h22::first-letter
+{
+    color: red;
+    font-size: 50px;
+    margin-left: 100px;
+}
+#calender{
+    margin-top: 50px;
+    margin-left: 100px;
+    font-size: 30px;
+    color: #aaa;
+}
+#call{
+    
+    margin-left: 100px;
+    font-size: 30px;
+    color: #aaa;
+}
+#mail{
+    
+    margin-left: 100px;
+    font-size: 30px;
+    color: #aaa;
+}
+
+#home{
+    
+    margin-left: 100px;
+    font-size: 30px;
+    color: #aaa;
+}
+
+#info span{
+    font-size: 20px;
+    color: #aaa;
+    margin-left: 30px;
+}
+#about{
+    height: 700px;
+    background-color;
+}
+#about-box{
+    margin-top: 100px;
+    padding: 20px;
+    margin-left: 100px;
+
+height: 200px;
+box-shadow:20px 20px 50px 15px grey; 
+
+}
+#apple{
+    font-size: 50px;
+    color:skyblue;
+
+}
+#html5{
+    font-size: 50px;
+    color:orangered;
+
+}
+
+#software{
+    font-size: 50px;
+    color:yellow;
+
+}
+
+#mobile{
+    font-size: 70px;
+    color:lime;
+
+}
+#spl{
+    margin-top: 100px;
+}
+#skill-p{
+    margin-top: 50px;
+    margin-left: 100px;
+    color: #aaa;
+    margin-right: 110px;
+}
+#con-details{
+    
+    margin-left: 100px;
+    height: 500px;
+}
+#con-form{
+    
+    margin-left: 50px;
+    height: 500px;
+}
+#con-icon1{
+    margin-top: 50px;
+    
+    border: 1px solid #ddd;
+    font-size: 35px;
+    padding: 30px;
+    background-color: rgb(242, 241, 252);
+    color: blue;
+
+}
+#span-icon1{
+    font-size: 25px;
+    color: blue;
+    margin-left: 30px;
+  
+}
+#con-icon2{
+    margin-top: 50px;
+    
+    border: 1px solid #ddd;
+    font-size: 35px;
+    padding: 35px;
+    background-color: rgb(242, 241, 252);
+    color: blue;
+
+}
+#span-icon2{
+    font-size: 25px;
+    color: blue;
+    margin-left: 30px;
+  
+}
+#con-icon3{
+    margin-top: 50px;
+    
+    border: 1px solid #ddd;
+    font-size: 35px;
+    padding: 35px;
+    background-color: rgb(242, 241, 252);
+    color: blue;
+
+}
+#span-icon3{
+    font-size: 25px;
+    color: blue;
+    margin-left: 30px;
+  
+}
+#form-name{
+    border-top: none;
+    border-left: none;
+    background-color: rgb(242, 241, 252);
+    width: 90%;
+    height: 50px;
+    font-size: 20px;
+    padding-left: 20px;
+    margin-top:50px;
+}
+#form-email{
+    border-top: none;
+    border-left: none;
+    background-color: rgb(242, 241, 252);
+    width: 90%;
+    height: 50px;
+    font-size: 20px;
+    padding-left: 20px;
+    margin-top:50px ;
+}
+#form-subject{
+    border-top: none;
+    border-left: none;
+    background-color: rgb(242, 241, 252);
+    width: 90%;
+    height: 50px;
+    font-size: 20px;
+    padding-left: 20px;
+    margin-top:50px;
+}
+#form-messege{
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+    background-color: rgb(242, 241, 252);
+    width: 90%;
+    height: 120px;
+    font-size: 20px;
+    padding-left: 20px;
+    margin-top:50px;
+}
+#form-button{
+    background-color: rgb(9, 161, 231);
+    padding: 10px;
+    color: white;
+    border-right: none;
+}
+#education{
+    margin-left: 100px;
+    margin-top: 100px;
+    margin-right: 100px;
+    
+
+}
+#education button{
+    width: 100%;
+    background-color: rgb(242, 241, 252);
+    height: 50px;
+    margin-top:15px;
+    padding:10px
+    
+}

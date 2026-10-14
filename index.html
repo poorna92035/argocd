@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Poornakumar Reddy | Profile</title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+  <style>
+    :root{
+      --primary:#2bcff8;
+      --primary-dark:#0ea5c9;
+      --dark:#1f2430;
+      --light:#f5f7fb;
+      --text:#444;
+      --muted:#7a7a7a;
+      --orange:#ff7f50;
+      --white:#ffffff;
+      --border:#e6edf4;
+      --shadow:0 18px 40px rgba(24, 39, 75, 0.12);
+    }
+
+    *{
+      box-sizing:border-box;
+    }
+
+    html{
+      scroll-behavior:smooth;
+    }
+
+    body{
+      font-family: Arial, sans-serif;
+      background:#f7f9fc;
+      color:var(--text);
+      line-height:1.6;
+    }
+
+    a{
+      text-decoration:none !important;
+    }
+
+    .navbar{
+      background:linear-gradient(90deg, rgba(43,207,248,1), rgba(18,176,214,1));
+      padding:18px 0;
+      box-shadow:0 6px 18px rgba(0,0,0,0.08);
+    }
+
+    .navbar-nav{
+      width:100%;
+      justify-content:center;
+      gap:18px;
+      flex-wrap:wrap;
+    }
+
+    .nav-link{
+      color:#fff !important;
+      font-weight:600;
+      letter-spacing:0.8px;
+      text-transform:uppercase;
+      font-size:14px;
+      padding:8px 14px !important;
+      transition:0.3s ease;
+    }
+
+    .nav-link:hover{
+      opacity:0.85;
+      transform:translateY(-1px);
+    }
+
+    .hero{
+      padding:70px 0 40px;
+      background:linear-gradient(135deg, #eafcff 0%, #ffffff 100%);
+    }
+
+    .profile-image-wrap{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+    }
+
+    .profile-image{
+      width:100%;
+      max-width:420px;
+      border-radius:25px;
+      border:8px solid #fff;
+      box-shadow:var(--shadow);
+      object-fit:cover;
+    }
+
+    .hero-content{
+      padding-top:30px;
+    }
+
+    .small-text{
+      color:var(--primary-dark);
+      font-size:18px;
+      text-transform:uppercase;
+      letter-spacing:2px;
+      font-weight:700;
+      margin-bottom:10px;
+    }
+
+    .hero h1{
+      font-size:52px;
+      line-height:1.1;
+      font-weight:800;
+      color:var(--dark);
+      margin:0 0 12px;
+    }
+
+    .hero h1 span{
+      display:block;
+      color:var(--primary-dark);
+    }
+
+    .role-badge{
+      display:inline-block;
+      background:var(--primary);
+      color:#0d2d39;
+      padding:12px 24px;
+      border-radius:30px;
+      margin:20px 0 25px;
+      font-weight:700;
+      text-transform:uppercase;
+      letter-spacing:1.2px;
+      font-size:14px;
+    }
+
+    .contact-list{
+      list-style:none;
+      padding:0;
+      margin:0;
+      display:grid;
+      gap:14px;
+      font-size:16px;
+      color:var(--text);
+    }
+
+    .contact-list li{
+      display:flex;
+      align-items:center;
+      gap:12px;
+    }
+
+    .contact-list i{
+      width:38px;
+      height:38px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      background:#edfaff;
+      color:var(--primary-dark);
+      border-radius:50%;
+      font-size:18px;
+    }
+
+    .section{
+      padding:80px 0;
+    }
+
+    .section-tag{
+      color:#8c8c8c;
+      font-size:20px;
+      margin-bottom:8px;
+      letter-spacing:1px;
+    }
+
+    .section-title{
+      font-size:42px;
+      font-weight:800;
+      color:var(--dark);
+      margin-bottom:18px;
+      text-transform:uppercase;
+    }
+
+    .mini-title{
+      font-size:24px;
+      font-weight:800;
+      color:var(--dark);
+      margin:36px 0 18px;
+      text-transform:uppercase;
+    }
+
+    .about-text{
+      font-size:18px;
+      color:var(--muted);
+      line-height:1.9;
+    }
+
+    .stack-grid{
+      display:flex;
+      flex-wrap:wrap;
+      gap:14px;
+      margin-top:10px;
+    }
+
+    .stack-pill{
+      background:linear-gradient(135deg, #eafcff, #dff6ff);
+      color:var(--primary-dark);
+      border:1px solid rgba(14,165,201,0.18);
+      border-radius:999px;
+      padding:10px 18px;
+      font-weight:700;
+      font-size:14px;
+      letter-spacing:0.5px;
+      box-shadow:0 8px 18px rgba(14, 165, 201, 0.08);
+    }
+
+    .feature-grid{
+      margin-top:40px;
+      display:grid;
+      grid-template-columns:repeat(4, minmax(220px, 1fr));
+      gap:24px;
+    }
+
+    .feature-card{
+      background:#fff;
+      border-radius:18px;
+      padding:30px 20px;
+      text-align:center;
+      box-shadow:0 12px 28px rgba(20, 36, 63, 0.08);
+      border-bottom:5px solid transparent;
+      transition:transform 0.3s ease, box-shadow 0.3s ease;
+      min-height:220px;
+    }
+
+    .feature-card:hover{
+      transform:translateY(-6px);
+      box-shadow:0 20px 35px rgba(20,36,63,0.12);
+    }
+
+    .feature-card i{
+      font-size:52px;
+      margin-bottom:18px;
+      color:var(--dark);
+    }
+
+    .feature-card p{
+      font-size:20px;
+      font-weight:600;
+      margin:0;
+      color:var(--dark);
+    }
+
+    .banner{
+      background:linear-gradient(90deg, #ffb347, #ff8c42);
+      border-radius:18px;
+      padding:42px 30px;
+      margin-top:50px;
+      box-shadow:var(--shadow);
+    }
+
+    .banner h3{
+      color:#fff;
+      font-size:36px;
+      font-weight:700;
+      margin-bottom:18px;
+      line-height:1.3;
+    }
+
+    .banner button{
+      background:transparent;
+      color:#fff;
+      border:2px solid rgba(255,255,255,0.9);
+      padding:12px 28px;
+      font-weight:700;
+      border-radius:30px;
+      transition:0.3s ease;
+    }
+
+    .banner button:hover{
+      background:#fff;
+      color:#ff8c42;
+    }
+
+    .skills-wrap{
+      margin-top:25px;
+    }
+
+    .skill-group{
+      margin-bottom:28px;
+    }
+
+    .skill-label{
+      display:flex;
+      justify-content:space-between;
+      margin-bottom:8px;
+      font-weight:700;
+      color:var(--dark);
+    }
+
+    .progress{
+      border-radius:25px;
+      height:12px;
+      background:#edf1f7;
+      overflow:hidden;
+    }
+
+    .progress-bar{
+      border-radius:25px;
+      font-size:11px;
+      line-height:12px;
+      font-weight:700;
+      color:#fff;
+      text-align:center;
+    }
+
+    .education-block{
+      margin-top:30px;
+    }
+
+    .edu-item{
+      background:#fff;
+      border:1px solid var(--border);
+      border-radius:14px;
+      margin-bottom:18px;
+      overflow:hidden;
+      box-shadow:0 6px 20px rgba(0,0,0,0.04);
+    }
+
+    .edu-toggle{
+      width:100%;
+      text-align:left;
+      background:#fff;
+      border:none;
+      color:var(--dark);
+      font-weight:700;
+      padding:18px 20px;
+      font-size:18px;
+      position:relative;
+    }
+
+    .edu-toggle::after{
+      content:"\f067";
+      font-family:"FontAwesome";
+      position:absolute;
+      right:20px;
+      top:50%;
+      transform:translateY(-50%);
+      color:var(--primary-dark);
+    }
+
+    .edu-toggle[aria-expanded="true"]::after{
+      content:"\f068";
+    }
+
+    .edu-content{
+      padding:0 20px 20px;
+      border-top:1px solid var(--border);
+      background:#fafcff;
+      color:var(--text);
+      line-height:2;
+    }
+
+    .contact-box{
+      background:#fff;
+      border-radius:18px;
+      box-shadow:0 12px 28px rgba(20, 35, 63, 0.08);
+      padding:30px 25px;
+    }
+
+    .contact-list-vertical{
+      list-style:none;
+      padding:0;
+      margin:0;
+      display:grid;
+      gap:22px;
+    }
+
+    .contact-list-vertical li{
+      display:flex;
+      align-items:flex-start;
+      gap:14px;
+      color:var(--text);
+      font-size:17px;
+    }
+
+    .contact-list-vertical i{
+      width:46px;
+      height:46px;
+      min-width:46px;
+      border-radius:50%;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      background:linear-gradient(135deg, #dff9ff, #d7f0ff);
+      color:var(--primary-dark);
+      font-size:20px;
+    }
+
+    .form-control{
+      border:1px solid #dfeaf3;
+      border-radius:12px;
+      padding:14px 15px;
+      margin-bottom:16px;
+      font-size:15px;
+      background:#fdfdff;
+    }
+
+    .form-control:focus{
+      border-color:var(--primary);
+      box-shadow:0 0 0 0.2rem rgba(43,207,248,0.15);
+    }
+
+    .submit-btn{
+      background:linear-gradient(90deg, var(--primary), var(--primary-dark));
+      color:#fff;
+      border:none;
+      padding:14px 28px;
+      border-radius:30px;
+      font-weight:700;
+      letter-spacing:0.8px;
+      transition:0.3s ease;
+    }
+
+    .submit-btn:hover{
+      transform:translateY(-2px);
+      box-shadow:0 12px 24px rgba(16,148,182,0.23);
+    }
+
+    footer{
+      background:#0e1117;
+      color:#dfe5ee;
+      padding:50px 0 20px;
+      margin-top:60px;
+    }
+
+    .footer-grid{
+      display:grid;
+      grid-template-columns:repeat(3, minmax(220px, 1fr));
+      gap:24px;
+    }
+
+    .footer-title{
+      color:#fff;
+      font-size:22px;
+      margin-bottom:18px;
+      font-weight:700;
+    }
+
+    .footer-text{
+      color:#b9bfd0;
+      font-size:16px;
+      line-height:1.8;
+    }
+
+    .newsletter input{
+      width:100%;
+      background:transparent;
+      border:1px solid rgba(255,255,255,0.3);
+      color:#fff;
+      padding:12px 14px;
+      border-radius:10px;
+      margin-bottom:12px;
+    }
+
+    .newsletter button{
+      background:var(--primary);
+      border:none;
+      padding:12px 18px;
+      border-radius:10px;
+      font-weight:700;
+      color:#0c2431;
+    }
+
+    .socials a{
+      display:inline-flex;
+      justify-content:center;
+      align-items:center;
+      width:40px;
+      height:40px;
+      border-radius:50%;
+      background:rgba(255,255,255,0.08);
+      color:#dfe5ee;
+      margin-right:10px;
+      transition:0.3s ease;
+    }
+
+    .socials a:hover{
+      background:var(--primary);
+      color:#0d2832;
+    }
+
+    .copyright{
+      border-top:1px solid rgba(255,255,255,0.15);
+      margin-top:30px;
+      padding-top:18px;
+      text-align:center;
+      color:#b9bfd0;
+      font-size:14px;
+    }
+
+    @media (max-width: 991px){
+      .hero h1{
+        font-size:42px;
+      }
+      .feature-grid{
+        grid-template-columns:repeat(2, minmax(220px, 1fr));
+      }
+      .footer-grid{
+        grid-template-columns:1fr;
+      }
+    }
+
+    @media (max-width: 575px){
+      .hero{
+        padding-top:40px;
+      }
+
+      .hero h1{
+        font-size:34px;
+      }
+
+      .section-title{
+        font-size:32px;
+      }
+
+      .feature-grid{
+        grid-template-columns:1fr;
+      }
+
+      .banner h3{
+        font-size:28px;
+      }
+
+      .navbar-nav{
+        gap:8px;
+      }
+
+      .nav-link{
+        font-size:12px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <div class="navbar-nav">
+        <a class="nav-link" href="#">Home</a>
+        <a class="nav-link" href="#about">About Me</a>
+        <a class="nav-link" href="#skills">Skills</a>
+        <a class="nav-link" href="#education">Education</a>
+        <a class="nav-link" href="#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-5 col-md-6">
+          <div class="profile-image-wrap">
+            <img src="img/poornasmart.jpg" alt="Poornakumar Reddy" class="profile-image" />
+          </div>
+        </div>
+
+        <div class="col-lg-7 col-md-6">
+          <div class="hero-content">
+            <p class="small-text">Hello Everybody, This Is</p>
+            <h1>
+              Poornakumar Reddy
+              <span>Kambham Reddy</span>
+            </h1>
+
+            <div class="role-badge">Cloud & DevOps Engineer</div>
+
+            <ul class="contact-list">
+              <li><i class="fa fa-calendar"></i> <span>19th October 1997</span></li>
+              <li><i class="fa fa-phone-square"></i> <span>+91 7093809047</span></li>
+              <li><i class="fa fa-envelope"></i> <span>Poornakambham2020@gmail.com</span></li>
+              <li><i class="fa fa-home"></i> <span>Tirupati, India</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="about">
+    <div class="container">
+      <p class="section-tag">About Me</p>
+      <h2 class="section-title">Who Am I?</h2>
+
+      <p class="about-text">
+        Hi, I’m <strong>Poornakumar Reddy Kambham</strong>, a Cloud & DevOps Engineer focused on building scalable, secure, and reliable infrastructure.
+        I work with modern cloud platforms, automation tools, CI/CD pipelines, and containerized deployments to improve software delivery and operational efficiency.
+        My goal is to bridge the gap between development and operations by creating streamlined workflows, reducing deployment risks, and ensuring high availability across systems.
+      </p>
+
+      <div class="feature-grid">
+        <div class="feature-card" style="border-color:#5dc4ff;">
+          <i class="fa fa-cloud" style="color:#5dc4ff;"></i>
+          <p>Cloud Infrastructure</p>
+        </div>
+
+        <div class="feature-card" style="border-color:#ff7b54;">
+          <i class="fa fa-cogs" style="color:#ff7b54;"></i>
+          <p>Automation</p>
+        </div>
+
+        <div class="feature-card" style="border-color:#f3c84b;">
+          <i class="fa fa-server" style="color:#f3c84b;"></i>
+          <p>Deployment</p>
+        </div>
+
+        <div class="feature-card" style="border-color:#66d466;">
+          <i class="fa fa-shield" style="color:#66d466;"></i>
+          <p>Security</p>
+        </div>
+      </div>
+
+      <div class="banner">
+        <div class="row align-items-center">
+          <div class="col-lg-9 col-md-8">
+            <h3>Building resilient systems and faster delivery pipelines for modern businesses.</h3>
+          </div>
+          <div class="col-lg-3 col-md-4 text-md-right text-left">
+            <button>Hire Me</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="skills">
+    <div class="container">
+      <p class="section-tag">About Me</p>
+      <h2 class="section-title">My Skills</h2>
+
+      <div class="skills-wrap">
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="skill-group">
+              <div class="skill-label">
+                <span>AWS Cloud</span>
+                <span>90%</span>
+              </div>
+              <div class="progress">
+                <div class="progress-bar bg-info" style="width:90%"> </div>
+              </div>
+            </div>
+
+            <div class="skill-group">
+              <div class="skill-label">
+                <span>Docker & Containers</span>
+                <span>85%</span>
+              </div>
+              <div class="progress">
+                <div class="progress-bar bg-primary" style="width:85%"> </div>
+              </div>
+            </div>
+
+            <div class="skill-group">
+              <div class="skill-label">
+                <span>Kubernetes</span>
+                <span>80%</span>
+              </div>
+              <div class="progress">
+                <div class="progress-bar bg-warning" style="width:80%"> </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="skill-group">
+              <div class="skill-label">
+                <span>CI/CD Pipelines</span>
+                <span>90%</span>
+              </div>
+              <div class="progress">
+                <div class="progress-bar bg-success" style="width:90%"> </div>
+              </div>
+            </div>
+
+            <div class="skill-group">
+              <div class="skill-label">
+                <span>Linux Administration</span>
+                <span>88%</span>
+              </div>
+              <div class="progress">
+                <div class="progress-bar bg-info" style="width:88%"> </div>
+              </div>
+            </div>
+
+            <div class="skill-group">
+              <div class="skill-label">
+                <span>Terraform & IaC</span>
+                <span>82%</span>
+              </div>
+              <div class="progress">
+                <div class="progress-bar bg-danger" style="width:82%"> </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h3 class="mini-title">Cloud & DevOps</h3>
+      <div class="stack-grid">
+        <span class="stack-pill">AWS</span>
+        <span class="stack-pill">Azure</span>
+        <span class="stack-pill">Docker</span>
+        <span class="stack-pill">Kubernetes</span>
+        <span class="stack-pill">CI/CD</span>
+        <span class="stack-pill">Jenkins</span>
+        <span class="stack-pill">Git</span>
+        <span class="stack-pill">GitHub Actions</span>
+        <span class="stack-pill">Linux</span>
+        <span class="stack-pill">Terraform</span>
+        <span class="stack-pill">Ansible</span>
+        <span class="stack-pill">Monitoring</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="education">
+    <div class="container">
+      <p class="section-tag">Education</p>
+      <h2 class="section-title">Education</h2>
+
+      <div class="education-block">
+        <div class="edu-item">
+          <button class="edu-toggle" data-toggle="collapse" data-target="#demo1" aria-expanded="true">
+            Master of Computer Applications
+          </button>
+          <div id="demo1" class="collapse show edu-content">
+            Course: Master of Computer Applications<br />
+            Academic Year: 2018 - 2020<br />
+            College: KMM Institute of PG Studies<br />
+            Tirupati, India
+          </div>
+        </div>
+
+        <div class="edu-item">
+          <button class="edu-toggle" data-toggle="collapse" data-target="#demo2" aria-expanded="false">
+            Bachelor of Science
+          </button>
+          <div id="demo2" class="collapse edu-content">
+            Course: Bachelor of Science<br />
+            Academic Year: 2015 - 2018<br />
+            College: Sree Bharathi Degree College<br />
+            Piler, India
+          </div>
+        </div>
+
+        <div class="edu-item">
+          <button class="edu-toggle" data-toggle="collapse" data-target="#demo3" aria-expanded="false">
+            Intermediate
+          </button>
+          <div id="demo3" class="collapse edu-content">
+            Course: Intermediate<br />
+            Academic Year: 2013 - 2015<br />
+            College: Sree Chaitanya Junior College<br />
+            Piler, India
+          </div>
+        </div>
+
+        <div class="edu-item">
+          <button class="edu-toggle" data-toggle="collapse" data-target="#demo4" aria-expanded="false">
+            SSC
+          </button>
+          <div id="demo4" class="collapse edu-content">
+            Course: SSC<br />
+            Academic Year: 2013<br />
+            College: ZP High School<br />
+            GYarampalli, K.V Palli, Chittoor, India
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="contact">
+    <div class="container">
+      <p class="section-tag">Get In Touch</p>
+      <h2 class="section-title">Contact</h2>
+
+      <div class="row">
+        <div class="col-lg-5">
+          <div class="contact-box">
+            <ul class="contact-list-vertical">
+              <li>
+                <i class="fa fa-envelope-o"></i>
+                <span>poornakambham2020@gmail.com</span>
+              </li>
+              <li>
+                <i class="fa fa-phone-square"></i>
+                <span>+91 7093809047</span>
+              </li>
+              <li>
+                <i class="fa fa-home"></i>
+                <span>Tirupati, India</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-lg-7">
+          <div class="contact-box">
+            <form>
+              <input type="text" class="form-control" placeholder="Name">
+              <input type="email" class="form-control" placeholder="Email">
+              <input type="text" class="form-control" placeholder="Subject">
+              <textarea class="form-control" rows="5" placeholder="Message"></textarea>
+              <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h4 class="footer-title">About Me</h4>
+          <p class="footer-text">
+            I am a dedicated Cloud & DevOps Engineer focused on automation, infrastructure reliability, and continuous delivery.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Newsletter</h4>
+          <div class="newsletter">
+            <input type="text" placeholder="Enter text here">
+            <button>Send</button>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Follow Me</h4>
+          <div class="socials">
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="#"><i class="fa fa-envelope-o"></i></a>
+            <a href="#"><i class="fa fa-pinterest"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="copyright">
+        All &copy; copyrights are reserved by Poornakumar Kambham
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</body>
+</html>
